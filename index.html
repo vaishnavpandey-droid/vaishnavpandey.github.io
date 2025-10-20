@@ -1,0 +1,227 @@
+10:53 20-10-202510:53 20-10-2025<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vaishnav Pandey — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #101b30;
+      --accent: #00d8ff;
+      --accent2: #7c3aed;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #0a1120, #0f1724);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, rgba(0,216,255,0.15), rgba(124,58,237,0.15));
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 20px auto;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #041022;
+      font-weight: 700;
+      font-size: 36px;
+      box-shadow: 0 0 30px rgba(0,216,255,0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {transform: translateY(0)}
+      50% {transform: translateY(-10px)}
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(0,216,255,0.25);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 2px;
+      background: var(--accent2);
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      border-radius: 2px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chip {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #041022;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,216,255,0.2);
+      transition: transform 0.2s;
+    }
+    .chip:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #041022;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 12px 18px;
+      display: inline-block;
+      margin: 8px 0;
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Floating glowing particles */
+    .particle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: move 10s linear infinite;
+    }
+    @keyframes move {
+      0% {transform: translateY(0) translateX(0)}
+      100% {transform: translateY(100vh) translateX(30vw)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="avatar">VP</div>
+    <h1>Vaishnav Pandey</h1>
+    <p>Frontend Developer • UI Enthusiast</p>
+  </header>
+
+  <div class="container">
+    <section class="card">
+      <div class="section-title">About Me</div>
+      <p>I'm Vaishnav Pandey, a frontend developer who enjoys building fast, accessible web interfaces. I love turning design ideas into working products and continuously exploring new technologies.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Skills</div>
+      <div class="skills">
+        <div class="chip">HTML</div>
+        <div class="chip">CSS</div>
+        <div class="chip">JavaScript</div>
+        <div class="chip">React</div>
+        <div class="chip">UI/UX Design</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Projects</div>
+      <ul>
+        <li><strong>Portfolio Website:</strong> A responsive portfolio to showcase my skills, projects, and contact info.</li>
+        <li><strong>Frontend Components Library:</strong> Reusable UI components built using HTML, CSS, and JS.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Contact Me</div>
+      <p>If you’d like to get in touch, feel free to email me or connect on LinkedIn:</p>
+      <a class="btn" href="mailto:vaishnavpandey735@gmail.com">📧 Email Me</a>
+      <a class="btn" href="https://www.linkedin.com/in/vaishnav-pandey-079bb4215" target="_blank">💼 LinkedIn</a>
+    </section>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Vaishnav Pandey • Built with ❤️ and JavaScript
+  </footer>
+
+  <script>
+    // dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // create floating particles
+    const particleCount = 30;
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.top = Math.random() * 100 + 'vh';
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.animationDuration = (8 + Math.random() * 10) + 's';
+      particle.style.animationDelay = Math.random() * 10 + 's';
+      document.body.appendChild(particle);
+    }
+  </script>
+</body>
+</html>
